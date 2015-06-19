@@ -22,7 +22,7 @@ to your `composer.json` file:
 ```json
 {
     "require": {
-        "lokielse/omnipay-alipay": "dev-master"
+        "srampley/omnipay-alipay": "dev-master"
     }
 }
 ```
