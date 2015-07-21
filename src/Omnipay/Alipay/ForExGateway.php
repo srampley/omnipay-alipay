@@ -28,4 +28,14 @@ class ForExGateway extends BaseAbstractGateway
         //the Express Purchase Request message object currently dose all the required work, so not duplicating more code let
         return $this->createRequest('\Omnipay\Alipay\Message\ExpressPurchaseRequest', $parameters);
     }
+    
+    /**
+     * Duplicates purchase functionally, added so interface is closer to other gateways
+     */
+    public function authorize(array $parameters = array())
+    {
+        $this->setService($this->service_name);
+        //the Express Purchase Request message object currently dose all the required work, so not duplicating more code let
+        return $this->createRequest('\Omnipay\Alipay\Message\ExpressPurchaseRequest', $parameters);
+    }
 }
